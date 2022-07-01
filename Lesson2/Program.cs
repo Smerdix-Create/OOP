@@ -24,12 +24,15 @@ BankAccount[] accountNumbers = new BankAccount[5];
 accountNumbers[0] = new(343454, TypeBankAccount.Credit);
 accountNumbers[1] = new(546456, TypeBankAccount.Accounting);
 accountNumbers[2] = new(3244, TypeBankAccount.Credit);
-accountNumbers[3] = new(23, TypeBankAccount.Current);
-accountNumbers[4] = new(2342342344, TypeBankAccount.Deposit);
+accountNumbers[3] = new(23);
+accountNumbers[4] = new(TypeBankAccount.Deposit);
 
 foreach (BankAccount bankAccount in accountNumbers)
 {
-    bankAccount.GetAccountNumber();
+    Console.WriteLine($"Счет: {bankAccount.Number}");
+    Console.WriteLine($"Тип счета: {bankAccount.Type}");
+    Console.WriteLine($"Баланс счета: {bankAccount.Balance}");
+    Console.WriteLine();
 }
 
 Console.ReadKey(true);

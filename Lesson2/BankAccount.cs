@@ -51,11 +51,4 @@ public class BankAccount
         return accountNumber++;
     }
 
-    public void GetAccountNumber()
-    {
-
-        Console.WriteLine($"Информация о счёте: номер счёта - {accountNumber}; баланс - {Balance} руб.; тип счёта - {Type}");
-        accountNumber++;
-        Console.WriteLine();
-    }
 }
