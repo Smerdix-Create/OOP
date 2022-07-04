@@ -14,14 +14,14 @@ public class BankAccount
 
     private int _number;
 
-    public decimal Balance { get; set; }
+    public decimal Balance { get; /* private */ set; }
 
-    public TypeBankAccount Type { get; set; }
+    public TypeBankAccount Type { get; private set; }
 
     public int Number
     {
         get => _number;
-        set
+        private set
         {
             _number = value;
         }
