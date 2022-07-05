@@ -1,5 +1,5 @@
 ﻿//Первая реализация, через List
-var ListAccount = new List<BankAccount>();
+/*var ListAccount = new List<BankAccount>();
 ListAccount.Add(new BankAccount(546546567));
 ListAccount.Add(new BankAccount(TypeBankAccount.Credit));
 ListAccount.Add(new BankAccount(32434, TypeBankAccount.Credit));
@@ -16,7 +16,7 @@ void GetAccount(BankAccount account)
     Console.WriteLine($"Тип счета: {account.Type}");
     Console.WriteLine($"Баланс счета: {account.Balance}");
     Console.WriteLine();
-}
+}*/
 
 
 //Вторая реализация
@@ -26,6 +26,8 @@ accountNumbers[1] = new(546456, TypeBankAccount.Accounting);
 accountNumbers[2] = new(3244, TypeBankAccount.Credit);
 accountNumbers[3] = new(23);
 accountNumbers[4] = new(TypeBankAccount.Deposit);
+
+accountNumbers[4].TransferMoney(accountNumbers[3], 23);
 
 foreach (BankAccount bankAccount in accountNumbers)
 {
