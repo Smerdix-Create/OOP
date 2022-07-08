@@ -7,7 +7,6 @@
         {
             chars[i] = str[str.Length - 1 - i];
         }
-        Console.WriteLine(chars);
     }
 }
 
