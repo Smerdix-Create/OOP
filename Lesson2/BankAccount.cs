@@ -51,4 +51,19 @@ public class BankAccount
         return accountNumber++;
     }
 
+    /// <summary>
+    /// Перевод денег с одного счёта на другой
+    /// </summary>
+    /// <param name="account">Счёт, с которого происходит списание</param>
+    /// <param name="money">Количество денег</param>
+    public void TransferMoney(BankAccount account, decimal money)
+    {
+        if (account.Balance < money)
+        {
+            Console.WriteLine("На счёте недостаточно денег для перевода");
+            return;
+        }
+        this.Balance += money;
+        account.Balance -= money;
+    }
 }
