@@ -3,7 +3,14 @@
     public class BuildingInfo
     {
         private static int numberBuilding = 1;
-       
+
+        private const double AverageFloorHeight = 2.9;
+
+        private const double SemibasementHeight = 1.5;
+        
+        private const double LoftHeight = 2;
+
+
         public double Height { get; private set; }
        
         public int Floor { get; }
@@ -38,7 +45,7 @@
         /// </summary>
         public void GetHeight()
         {
-            Height = Floor * 2.9 + 1.5 + 2;
+            Height = Floor * AverageFloorHeight + SemibasementHeight + LoftHeight;
         }
 
         /// <summary>
