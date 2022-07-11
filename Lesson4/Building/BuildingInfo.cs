@@ -8,10 +8,10 @@
        
         public int Floor { get; }
         
-        //Кол-во квартир на этаже
+        /// <summary>Кол-во квартир на этаже</summary>
         public int Flats { get; }
         
-        //Кол-во подъездов в доме
+        /// <summary>Кол-во подъездов в доме</summary>
         public int Entrance { get; }
         
         public int EntranceFlats { get; private set; }
