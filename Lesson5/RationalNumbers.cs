@@ -214,6 +214,12 @@
         }
 
         /// <summary>
+        /// Получение строкового формата
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString() => $"Числитель {Numerator}, Знаменатель {Denominator}";
+
+        /// <summary>
         /// Получение сокращенной дроби
         /// </summary>
         public void GetAbbreviatedNumber()
