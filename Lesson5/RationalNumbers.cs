@@ -124,6 +124,27 @@
         }
 
         /// <summary>
+        /// Переопределение Equals
+        /// </summary>
+        /// <param name="obj">Дробь</param>
+        /// <returns></returns>
+        public override bool Equals(Object? obj)
+        {
+            if (obj is RationalNumbers bankAccount) return Numerator == bankAccount.Numerator && Denominator == bankAccount.Denominator;
+            return false;
+        }
+
+        /// <summary>
+        /// Переопределение GetHashCode
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            return Numerator.GetHashCode() ^ Denominator.GetHashCode();
+        }
+
+
+        /// <summary>
         /// Сравнение дробей. Больше
         /// </summary>
         /// <param name="a">Первая дробь</param>
