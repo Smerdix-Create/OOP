@@ -84,9 +84,7 @@
         /// <returns></returns>
         public static RationalNumbers operator ++(RationalNumbers a)
         {
-            a.Numerator++;
-            a.Denominator++;
-            return a;
+            return new RationalNumbers(a.Numerator++, a.Denominator++);
         }
 
         /// <summary>
@@ -96,9 +94,7 @@
         /// <returns></returns>
         public static RationalNumbers operator --(RationalNumbers a)
         {
-            a.Numerator--;
-            a.Denominator--;
-            return a;
+            return new RationalNumbers(a.Numerator--, a.Denominator--);
         }
 
         /// <summary>
@@ -109,7 +105,7 @@
         /// <returns></returns>
         public static bool operator ==(RationalNumbers a, RationalNumbers b)
         {
-            return (a.Numerator == b.Numerator && a.Denominator == b.Denominator);
+            return a.Equals(b);
         }
 
         /// <summary>
@@ -120,7 +116,7 @@
         /// <returns></returns>
         public static bool operator !=(RationalNumbers a, RationalNumbers b)
         {
-            return (a.Numerator != b.Numerator || a.Denominator != b.Denominator);
+            return !a.Equals(b);
         }
 
         /// <summary>
@@ -130,7 +126,7 @@
         /// <returns></returns>
         public override bool Equals(Object? obj)
         {
-            if (obj is RationalNumbers bankAccount) return Numerator == bankAccount.Numerator && Denominator == bankAccount.Denominator;
+            if (obj is RationalNumbers rationalNumbers) return Numerator == rationalNumbers.Numerator && Denominator == rationalNumbers.Denominator;
             return false;
         }
 

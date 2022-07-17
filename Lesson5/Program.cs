@@ -10,13 +10,15 @@ b++;
 Console.WriteLine($"{b.Numerator}, {b.Denominator}");
 Console.WriteLine();*/
 
-Console.WriteLine(a.ToString());
+/*Console.WriteLine(a.ToString());*/
 
 if (a.Denominator == 0 || b.Denominator == 0)
 {
     Console.WriteLine("Знаменатель не может быть нулем");
     return;
 }
+
+Console.WriteLine(a != b);
 
 var c = a / b;
 c.GetAbbreviatedNumber();
