@@ -140,7 +140,10 @@
         /// <returns></returns>
         public override int GetHashCode()
         {
-            return Numerator.GetHashCode() ^ Denominator.GetHashCode();
+            unchecked
+            {
+                return (123 * Numerator.GetHashCode()) ^ Denominator.GetHashCode();
+            }
         }
 
 
