@@ -75,7 +75,7 @@ public class BankAccount
     /// <returns></returns>
     public static bool operator ==(BankAccount a, BankAccount b)
     {
-        return (a.Balance == b.Balance && a.Type == b.Type);
+        return a.Equals(b);
     }
 
     /// <summary>
@@ -86,7 +86,7 @@ public class BankAccount
     /// <returns></returns>
     public static bool operator !=(BankAccount a, BankAccount b)
     {
-        return !(a == b);
+        return !a.Equals(b);
     }
 
     /// <summary>

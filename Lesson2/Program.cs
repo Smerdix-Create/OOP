@@ -39,9 +39,9 @@ foreach (BankAccount bankAccount in accountNumbers)
 }
 
 
-Console.WriteLine(accountNumbers[0] == accountNumbers[5]);
-Console.WriteLine(accountNumbers[0] != accountNumbers[5]);
-Console.WriteLine(accountNumbers[0].Equals(accountNumbers[5]));
+Console.WriteLine(accountNumbers[3] == accountNumbers[3]);
+Console.WriteLine(accountNumbers[3] != accountNumbers[3]);
+Console.WriteLine(accountNumbers[3].Equals(accountNumbers[3]));
 Console.WriteLine(accountNumbers[0].GetHashCode());
 Console.WriteLine(accountNumbers[5].GetHashCode());
 Console.WriteLine(accountNumbers[0].ToString());
