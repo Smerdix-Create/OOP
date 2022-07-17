@@ -66,4 +66,52 @@ public class BankAccount
         this.Balance += money;
         account.Balance -= money;
     }
+
+    /// <summary>
+    /// Проверка равенства дроби по полям
+    /// </summary>
+    /// <param name="a">Первый счет</param>
+    /// <param name="b">Второй счет</param>
+    /// <returns></returns>
+    public static bool operator ==(BankAccount a, BankAccount b)
+    {
+        return a.Equals(b);
+    }
+
+    /// <summary>
+    /// Проверка неравенства дроби по полям
+    /// </summary>
+    /// <param name="a">Первый счет</param>
+    /// <param name="b">Второй счет</param>
+    /// <returns></returns>
+    public static bool operator !=(BankAccount a, BankAccount b)
+    {
+        return !a.Equals(b);
+    }
+
+    /// <summary>
+    /// Переопределение Equals
+    /// </summary>
+    /// <param name="obj">Счет</param>
+    /// <returns></returns>
+    public override bool Equals(Object? obj)
+    {
+        if (obj is BankAccount bankAccount) return Balance == bankAccount.Balance && Type == bankAccount.Type;
+        return false;
+    }
+
+    /// <summary>
+    /// Переопределение GetHashCode
+    /// </summary>
+    /// <returns></returns>
+    public override int GetHashCode()
+    {
+        return Balance.GetHashCode() ^ Type.GetHashCode();
+    }
+
+    /// <summary>
+    /// Переопределение ToString
+    /// </summary>
+    /// <returns></returns>
+    public override string ToString() => $"Номер счета {Number}, Баланс {Balance}, Тип счета {Type}";
 }
