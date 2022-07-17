@@ -130,7 +130,7 @@
         /// <returns></returns>
         public override bool Equals(Object? obj)
         {
-            if (obj is RationalNumbers bankAccount) return Numerator == bankAccount.Numerator && Denominator == bankAccount.Denominator;
+            if (obj is RationalNumbers rationalNumbers) return Numerator == rationalNumbers.Numerator && Denominator == rationalNumbers.Denominator;
             return false;
         }
 
